@@ -3,29 +3,223 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bartender</title>
     <link href="styles.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="manifest.json">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+     <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--<link rel="stylesheet" href="./style.css">
+      Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./frontStyle.css">
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 
-<button id="connect" type="button">Connect</button>
+   <header>
+      <div class="navbar-fixed nav-hgt">
+        <nav>
+          <div class="nav-wrapper lime darken-2">
+            <a href="./index.html" class="brand-logo center">
+              <img src="./logog.png"/>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <button id="connect" type="button">Connect</button>
+              <button id="disconnect" type="button">Disconnect</button>
+            </div>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- /Main header and Navigation -->
 
-<button id="disconnect" type="button">Disconnect</button>
+       <div class="container">
+      <!-- Search and filter section -->
+      <div class="row" id="searchAndFiltersSection">
+        <form class="lime darken-4 inputForm">
+          <div class="input-field col s12 m4 l4">
+            <i class="material-icons prefix" id="searchButton">search</i>
+            <input id="drinkInput" type="text" class="validate">
+            <label for="drinkInput">Cerca un drink</label>
+          </div>
 
-<div id="terminal"></div>
+          <div class="col s12 m8 l8 filter-margin randomBy">
+            <div class="input-field col s6 m3 l3 ">
+              Random drink by:
+            </div>
 
-<form id="send-form">
-    <input id="input" type="text">
-    <button type="submit">Send</button>
-</form>
+            <div class="col s6 m3 l3">
+              <select class="categoryFilter" id="categoryFilter">
+                <option value="main">Category</option>
+                <option value="Ordinary Drink">Ordinary Drink</option>
+                <option value="Cocktail">Cocktail</option>
+                <option value="Milk / Float / Shake">Milk / Float / Shake</option>
+                <option value="Other/Unknown">Other/Unknown</option>
+                <option value="Cocoa">Cocoa</option>
+                <option value="Shot">Shot</option>
+                <option value="Coffee / Tea">Coffee / Tea</option>
+                <option value="Homemade Liqueur">Homemade Liqueur</option>
+                <option value="Punch / Party Drink">Punch / Party Drink</option>
+                <option value="Beer">Beer</option>
+                <option value="Soft Drink / Soda">Soft Drink / Soda</option>
+              </select>
+            </div>
+            <div class="col s6 m3 l3">
+              <select class="ingredientFilter">
+                <option value="" selected="">Ingredient</option>
+                <option value="Light rum">Light rum</option>
+                <option value="Applejack">Applejack</option>
+                <option value="Gin">Gin</option>
+                <option value="Dark rum">Dark rum</option>
+                <option value="Sweet Vermouth">Sweet Vermouth</option>
+                <option value="Strawberry schnapps">Strawberry schnapps</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div> 
+      <!-- / Search and filter section -->
 
+      <!-- Intro Slider -->
+      <section class="row introSlider" style="margin-bottom: 50px">
+        <div class="slider">
+          <ul class="slides">
+            <li class="lime darken-3">
+              <img src="https://www.laguiago.com/wp-content/uploads/2019/09/alicantec.jpeg" alt="Intro slider"> <!-- random image -->
+              <div class="caption center-align">
+                <p></p>
+                <h3>Arduino Bartender</h3>
+              </div>
+            </li>
+            <li>
+              <img src="https://okdiario.com/img/2019/08/20/receta-de-cocktail-margarita-1-655x368.jpg" alt="Intro slider"><!-- random image -->
+              <div class="caption right-align">
+                <h3><br><br>Connettiti e ordina il tuo drink </h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section> 
+      <!-- /Intro Slider -->
+
+      <!-- Selected drink Section -->
+      <section class="row drinkIngredSection">
+        <!-- Drink Name and Main Image -->
+        <div class="col s12 m12 l12 lime darken-4 drinktxtcol">
+          <h4 id="drinkNameH4">Drink name</h4>
+          <div class="col s12 m12 l12">
+            <div class="card centerImg">
+              <div class="card-image"  
+              id="mainImage">
+
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- /Drink Name and Main Image -->
+      </section>
+
+      <!-- Ingredients Carousel -->
+      <section class="row" id="carouselBody">
+        <h5>Ingredients</h5>
+        <div id="wrapper">
+          <div id="drinksCar">
+            <div id="ingredientsContent">
+            </div>
+          </div>
+          <button id="prev">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path fill="none" d="M0 0h24v24H0V0z" />
+              <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+            </svg>
+          </button>
+          <button id="next">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path fill="none" d="M0 0h24v24H0V0z" />
+              <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+            </svg>
+          </button>
+        </div>
+      </section> 
+      <!-- /Ingredients Carousel -->
+
+      <!-- Preparation Collapsible -->
+      <section class="row drinkIngredSection">
+        <div style="text-align: center;"><h5>Preparation</h5></div>
+        <div class="col s12 m12 l12">
+          <ul class="collapsible" id="preparationCollap">
+          </ul>
+        </div>
+      </section>
+    <!-- /Preparation Collapsible -->
+
+    <footer class="page-footer lime darken-2">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Bartender</h5>
+            <p class="grey-text text-lighten-4">Connettiti, invia l'ordine e il drink in 2 minuti sarà pronto!</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <ul>
+              <li><a class="grey-text text-lighten-4" href="#!"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2020 Loris, Ciccio, Lanza Copyright
+        </div>
+      </div>
+    </footer>
+           
+//<div id="terminal"></div>
+
+//<form id="send-form">
+//    <input id="input" type="text">
+//    <button type="submit">Send</button>
+//</form>
+
+<!-- jQuery -->
 <script src="main.js"></script>
 <script src="companion.js" data-service-worker="sw.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+
+    <!-- Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </body>
 </html>
