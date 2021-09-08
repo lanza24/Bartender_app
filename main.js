@@ -165,6 +165,10 @@ function disconnect() {
   deviceCache = null;
 }
 
+function numero(n) {
+  data = 'n';
+}
+
 // Отправить данные подключенному устройству
 function send(data) {
   data = String(data);
