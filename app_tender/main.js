@@ -18,6 +18,7 @@ disconnectButton.addEventListener('click', function() {
 // Обработка события отправки формы
 sendForm.addEventListener('submit', function(event) {
   event.preventDefault(); // Предотвратить отправку формы
+  window.alert("premuto"); //*****FARE IL CONTROLLO SULL'ID DEL BOTTONE QUA
   send(inputField.value); // Отправить содержимое текстового поля
   inputField.value = '';  // Обнулить текстовое поле
   inputField.focus();     // Вернуть фокус на текстовое поле
