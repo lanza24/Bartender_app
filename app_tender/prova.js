@@ -18,6 +18,13 @@ function sendMessage(btn_id) {
 
 
 
+/// Sistemare sito grafica + bottoni di connesione
+/// Sistemare riga di codice nel file .ino
+/// Aggiungere qualcosa di visivo per capire se il bluetooth è attivo
+/// Desgin generale dell'affare + sistemare dosatore bottiglie + cable managment (cinghia?)
+
+
+
 
 	//leggo l'id del bottone, in base a quello mando il segnale per fare un determinato drink
 	//Il drink deve essere mappato

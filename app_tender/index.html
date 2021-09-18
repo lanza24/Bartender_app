@@ -1,100 +1,500 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="styles.css" rel="stylesheet">
-	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-	<link rel="manifest" href="manifest.json">
-	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="theme-color" content="#ffffff">
-	<meta name="description" content="" />
-	<meta name="author" content="" />
-	<title>Bartender babyyy</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Drinks</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- CSS
+            ================================================ -->
+            <!-- Owl Carousel -->
+            <link rel="stylesheet" href="css/owl.carousel.css">
+            <!-- bootstrap.min css -->
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            <!-- Font-awesome.min css -->
+            <link rel="stylesheet" href="css/font-awesome.min.css">
+            <!-- Main Stylesheet -->
+            <link rel="stylesheet" href="css/animate.min.css">
 
-	<!-- Favicon-->
-	<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-	<!-- Core theme CSS (includes Bootstrap)-->
-	<link href="css/styles.css" rel="stylesheet" />
-</head>
-<body>
-	<div class="d-flex" id="wrapper">
-     <!-- Sidebar-->
-     <div class="border-end bg-white" id="sidebar-wrapper">
-        <div class="sidebar-heading border-bottom bg-light">Bartender babyy</div>
-        <div class="list-group list-group-flush">
-           <a class="list-group-item list-group-item-action list-group-item-light p-3" href="drinks.html">Elenco drinks</a>
-           <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Shortcuts</a>
-           <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Overview</a>
-           <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
-           <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
-           <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
-       </div>
-   </div>
-   <!-- Page content wrapper-->
-   <div id="page-content-wrapper">
-      <!-- Top navigation-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-       <div class="container-fluid">
-        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
-        <button class="btn btn-primary" id="connect" type="button">Connect</button>
-        <button class="btn btn-primary" id="disconnect" type="button">Disconnect</button>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-          <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
-          <li class="nav-item dropdown">
-           <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#!">Action</a>
-            <a class="dropdown-item" href="#!">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#!">Something else here</a>
+            <link rel="stylesheet" href="css/main.css">
+            <!-- Responsive Stylesheet -->
+            <link rel="stylesheet" href="css/responsive.css">
+            <!-- Js -->
+            <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+            <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+            <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+            <script src="js/jquery.nav.js"></script>
+            <script src="js/jquery.sticky.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/plugins.js"></script>
+            <script src="js/wow.min.js"></script>
+            <script src="js/main.js"></script>
+            <!--<script src="prova.js"></script>!-->
+        </head>
+        <body>
+	<!--
+	header-img start 
+	============================== -->
+    <section id="hero-area">
+      <img class="img-responsive" src="images/header_tender2.jpg" alt="">
+  </section>
+	<!--
+    Header start 
+    ============================== -->
+    <nav id="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <nav class="navbar navbar-default">
+                          <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">
+                                <img src="images/logo/logo_small_resize.png" alt="Logo">
+                            </a>
+
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                          <ul class="nav navbar-nav navbar-right" id="top-nav">
+                            <!--<li><a href="./index.html">Return to Start</a></li>!-->
+                            <li><a href="#hero-area">Home</a></li>
+                            <li><a href="#about-us">Connessione</a></li>
+                            <li><a href="#slider">Drinks</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#price">menu</a></li>
+                            <li><a href="#subscribe">news</a></li>
+                            <li><a href="#contact-us">contacts</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
         </div>
-    </li>
-</ul>
-</div>
-</div>
-</nav>
-<!-- Page content-->
-<div class="container-fluid">
-    <div id="terminal"></div>
-    <form id="send-form">
-        <!--<input id="input" type="text">!-->
-        <!--<button type="submit" disabled>Send</button>!-->
-    </form>
-    <h1 class="mt-4">Istruzioni d'uso:</h1>
-    <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-    <p>
-        Make sure to keep all page content within the
-        <code>#page-content-wrapper</code>
-        . The top navbar is optional, and just for demonstration. Just create an element with the
-        <code>#sidebarToggle</code>
-        ID which will toggle the menu when clicked.
-    </p>
-</div>  
-</div>
-</div>
-<!-- Bootstrap core JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
-<script src="js/scripts.js"></script>
+    </div><!-- .col-md-12 close -->
+</div><!-- .row close -->
+</div><!-- .container close -->
+</nav><!-- header close -->
+<!--
+about-us start
+============================== -->
+<section id="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <img class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms" src="images/logo_tender.jpg" alt="cooker-img">
+                    <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" >Connetti <span>un dispositivo</span> </br> per poter preparare il tuo <span>Drink</span>
+                    </h1>
+                        <!--
+                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim </br> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in </br>voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat</p>
+                        !-->
+                        <button class="btn btn-prepara" id="connect" type="button">Connect</button>
+                        <button class="btn btn-prepara" id="disconnect" type="button">Disconnect</button>
+                        <div id="terminal">
+                            <form id="send-form">
+                                <!--<input id="input" type="text">!-->
+                                <!--<button type="submit" disabled>Send</button>!-->
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+        </div><!-- .containe close -->
+    </section><!-- #call-to-action close -->
+    <!--
+    
+    Slider start
+    ============================== -->
+    <section id="slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <div class="title">
+                            <h3>Drinks <span>Alcolici</span></h3>
 
+                            <div id="terminal"></div>
+                            <form id="send-form">
 
+                                <div id="owl-example" class="owl-carousel">
+                                    <div>
+                                        <img class="img-responsive" src="images/slider/slider1_negroni.jpg" alt="">
+                                        <h3>Negroni</h3>
+                                        <button class="btn btn-prepara" id="btn_negroni" onclick="sendMessage(this.id)"> prepara </button>
+                                    </div>
+                                    <div>
+                                        <img class="img-responsive" src="images/slider/slider1_ginlemon.jpg" alt="">
+                                        <h3>Gin Lemon</h3>
+                                        <button class="btn btn-prepara" id="btn_ginlemon" onclick="sendMessage(this.id)"> prepara </button>
+                                    </div>
+                                    <div>
+                                        <img class="img-responsive" src="images/slider/slider1_gintonic.jpg" alt="">
+                                        <h3>Gin Tonic</h3>
+                                        <button class="btn btn-prepara" id="btn_gintonic" onclick="sendMessage(this.id)"> prepara </button>
+                                    </div>
+                                    <div>
+                                        <img class="img-responsive" src="images/slider/slider1_negroni.jpg" alt="">
+                                        <h3>Long Island</h3>
+                                        <button class="btn btn-prepara" id="btn_longisland" onclick="sendMessage(this.id)"> prepara </button>
+                                    </div>
+                                    <div>
+                                        <img class="img-responsive" src="images/slider/slider1_vodkalemon.jpg" alt="">
+                                        <h3>Vodka Lemon</h3>
+                                        <button class="btn btn-prepara" id="btn_vodkalemon" onclick="sendMessage(this.id)"> prepara </button>
+                                    </div>
+                                    <div>
+                                        <img class="img-responsive" src="images/slider/slider1_cubalibre.jpg" alt="">
+                                        <h3>Cuba Libre</h3>
+                                        <button class="btn btn-prepara" id="btn_cubalibre" onclick="sendMessage(this.id)"> prepara </button>
+                                    </div>
+                                    <div>
+                                        <img class="img-responsive" src="images/slider/slider1_margarita.jpg" alt="">
+                                        <h3>Margarita</h3>
+                                        <button class="btn btn-prepara" id="btn_margarita" onclick="sendMessage(this.id)"> prepara </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!-- .col-md-12 close -->
+                </div><!-- .row close -->
+            </div><!-- .container close -->
+        </section><!-- slider close -->
+    <!--
+    blog start
+    ============================ -->
+    <section id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h1 class="heading">Latest <span>From</span> the <span>Blog</span></h1>
+                        <ul>
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="300ms">
+                                <div class="blog-img">
+                                    <img src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                </div>
+                                <div class="content-right">
+                                    <h3>Homestyle Chicken Pot Pie</h3>
+                                    <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="400ms">
+                                <div class="blog-img">
+                                    <img src="images/blog/blog-img-2.jpg" alt="blog-img">
+                                </div>
+                                <div class="content-right">
+                                    <h3>Homestyle Chicken Pot Pie</h3>
+                                    <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="500ms">
+                                <div class="content-left">
+                                    <h3>Homestyle Chicken Pot Pie</h3>
+                                    <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
+                                </div>
+                                <div class="blog-img-2">
+                                    <img src="images/blog/blog-img-3.jpg" alt="blog-img">
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="600ms">
+                                <div class="content-left">
+                                    <h3>Homestyle Chicken Pot Pie</h3>
+                                    <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
+                                </div>
+                                <div class="blog-img-2">
+                                    <img src="images/blog/blog-img-4.jpg" alt="blog-img">
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="700ms">
+                                <div class="blog-img">
+                                    <img src="images/blog/blog-img-5.jpg" alt="blog-img">
+                                </div>
+                                <div class="content-right">
+                                    <h3>Homestyle Chicken Pot Pie</h3>
+                                    <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
+                                </div>
+                            </li>
+                            <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="800ms">
+                                <div class="blog-img">
+                                    <img src="images/blog/blog-img-6.jpg" alt="blog-img">
+                                </div>
+                                <div class="content-right">
+                                    <h3>Homestyle Chicken Pot Pie</h3>
+                                    <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a class="btn btn-default btn-more-info wow bounceIn" data-wow-duration="500ms" data-wow-delay="1200ms" href="#" role="button">More Info</a>
+                    </div>
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+        </div><!-- .containe close -->
+    </section><!-- #blog close -->
+    <!--
+    price start
+    ============================ -->
+    <section id="price">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h1 class="heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms"><span>MENU</span> </h1>
+                        <!--<p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>!-->
+                        <div class="pricing-list">
+                            <div class="title">
+                                <h3>Drinks <span>disponibili</span></h3>
+                            </div>
+                            <ul>
+                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
+                                    <div class="item">
+                                        <div class="item-title">
+                                            <h2>Negroni</h2>
+                                            <div class="border-bottom"></div>
+                                            <span>€ 8.00</span>
+                                        </div>
+                                        <p>Campari, Vermouth, Gin</p>
+                                    </div>
+                                </li>
+                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
+                                    <div class="item">
+                                        <div class="item-title">
+                                            <h2>Gin Lemon</h2>
+                                            <div class="border-bottom"></div>
+                                            <span>€ 8.00</span>
+                                        </div>
+                                        <p>Gin, Lemon Soda</p>
+                                    </div>
+                                </li>
+                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
+                                    <div class="item">
+                                        <div class="item-title">
+                                            <h2>Gin Tonic </h2>
+                                            <div class="border-bottom"></div>
+                                            <span>€ 10.00</span>
+                                        </div>
+                                        <p>Gin, Tonica</p>
+                                    </div>
+                                </li>
+                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">
+                                    <div class="item">
+                                        <div class="item-title">
+                                            <h2>Long Island</h2>
+                                            <div class="border-bottom"></div>
+                                            <span>€ 10.00</span>
+                                        </div>
+                                        <p>In sviluppo</p>
+                                    </div>
+                                </li>
+                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="700ms">
+                                    <div class="item">
+                                        <div class="item-title">
+                                            <h2>Vodka Lemon</h2>
+                                            <div class="border-bottom"></div>
+                                            <span>€ 8.00</span>
+                                        </div>
+                                        <p>Vodka, Lemon Soda</p>
+                                    </div>
+                                </li>
+                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="800ms">
+                                    <div class="item">
+                                        <div class="item-title">
+                                            <h2>Cuba Libre</h2>
+                                            <div class="border-bottom"></div>
+                                            <span>€ 10.00</span>
+                                        </div>
+                                        <p>Rum bianco, Coca cola</p>
+                                    </div>
+                                </li>
+                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="800ms">
+                                    <div class="item">
+                                        <div class="item-title">
+                                            <h2>Margarita</h2>
+                                            <div class="border-bottom"></div>
+                                            <span>€ 10.00</span>
+                                        </div>
+                                        <p>Tequila, Cointreau, succo di lime</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a class="btn btn-default pull-right wow bounceIn" data-wow-duration="500ms" data-wow-delay="1200ms" href="#" role="button">More Info</a>
+                        </div>
+                    </div>
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+        </div><!-- .containe close -->
+    </section><!-- #price close -->
+    <!--
+    subscribe start
+    ============================ -->
+    <section id="subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h1 class=" heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms"> SUBSCRIBE <span>to our</span> NEWSLETTER</h1>
+                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Enter your email to subscribe...">
+                                    <div class="input-group-addon">
+                                        <button class="btn btn-default" type="submit" disabled>subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+        </div><!-- .containe close -->
+    </section><!-- #subscribe close -->
+    <!--
+    CONTACT US  start
+    ============================= -->
+    <section id="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h1 class="heading wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">our <span>CONTACT US</span></h1>
+                        <h3 class="title wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">Sign Up for <span>Email Alerts</span> </h3>
+                        <form>
+                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="600ms">
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Write your full name here...">
+                            </div>
+                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="800ms">
+                                <input type="text" class="form-control" placeholder="Write your email address here...">
+                            </div>
+                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1000ms">
+                                <textarea class="form-control" rows="3" placeholder="Write your message here..."></textarea>
+                            </div>
+                        </form>
+                        <a class="btn btn-default wow bounceIn" data-wow-duration="500ms" data-wow-delay="1300ms" href="#" role="button" disabled>send your message</a>
+                    </div>
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+        </div><!-- .container close -->
+    </section><!-- #contact-us close -->
+    <!--
+    footer  start
+    ============================= -->
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="block wow fadeInLeft"  data-wow-delay="200ms">
+                        <h3>CONTACT <span>INFO</span></h3>
+                        <div class="info">
+                            <ul>
+                                <li>
+                                  <h4><i class="fa fa-phone"></i>Telefone</h4>
+                                  <p>(000) 123 456 78- (000) 123 4567 89</p>
 
-<!--<button id="connect" type="button">Connect</button>
-    <button id="disconnect" type="button">Disconnect</button>
-    <div id="terminal"></div>
-    <form id="send-form">
-       <input id="input" type="text">
-       <button type="submit">Send</button>
-   </form>
-!-->
+                              </li>
+                              <li>
+                                  <h4><i class="fa fa-map-marker"></i>Address</h4>
+                                  <p>2046 Blue Spruce Lane Laurel Canada</p>
+                              </li>
+                              <li>
+                                  <h4><i class="fa fa-envelope"></i>E mail</h4>
+                                  <p>rest@gmail.com - rest@mail.ru</p>
+                                  
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <!-- .col-md-4 close -->
+              <div class="col-md-4">
+                <div class="block wow fadeInLeft"  data-wow-delay="700ms">
+                    <h3>LATEST <span>BLOG POSTS</span></h3>
+                    <div class="blog">
+                        <ul>
+                            <li>
+                                <h4><a href="#">Nov 9-2014</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Curabitur ut blandit sapien</p>
+                            </li>
+                            <li>
+                                <h4><a href="#">Sep 8-2014</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Curabitur ut blandit sapien</p>
+                            </li>
+                        </ul>                
+                    </div>
+                </div>
+            </div>
+            <!-- .col-md-4 close -->
+            <div class="col-md-4">
+                <div class="block wow fadeInLeft"  data-wow-delay="1100ms">
+                    <div class="gallary">
+                        <h3>PHOTO <span>STREAM</span></h3>
+                        <ul>
+                            <li>
+                                <a href="#"><img src="images/photo/photo-1.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/photo/photo-2.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/photo/photo-3.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/photo/photo-4.jpg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="social-media-link">
+                        <h3>Follow <span>US</span></h3>
+                        <ul>
+                            <li>
+                                <a href="https://www.instagram.com/christian_pinel/?hl=it">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/lanza_24/?hl=it">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/loreess3/?hl=it">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- .col-md-4 close -->
+        </div><!-- .row close -->
+    </div><!-- .containe close -->
+</section><!-- #footer close -->
+    <!--
+    footer-bottom  start
+    ============================= -->
+    <footer id="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="block">
+                        <p>Copyright &copy; 2021 - All Rights Reserved.Design and Developed By <a href="http://www.themefisher.com">Loris & Lanza & Christian</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-   <script src="main.js"></script>
-   <script src="companion.js" data-service-worker="sw.js"></script>
+    
+    <script src="main.js"></script>
+    <script src="companion.js" data-service-worker="sw.js"></script>
+    
 </body>
 </html>

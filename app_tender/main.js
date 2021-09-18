@@ -5,6 +5,8 @@ let terminalContainer = document.getElementById('terminal');
 let sendForm = document.getElementById('send-form');
 let inputField = document.getElementById('input');
 
+var drink = "";
+
 // Подключение к устройству при нажатии на кнопку Connect
 connectButton.addEventListener('click', function() {
   connect();
@@ -18,10 +20,12 @@ disconnectButton.addEventListener('click', function() {
 // Обработка события отправки формы
 sendForm.addEventListener('submit', function(event) {
   event.preventDefault(); // Предотвратить отправку формы
-  window.alert("premuto"); //*****FARE IL CONTROLLO SULL'ID DEL BOTTONE QUA
-  send(inputField.value); // Отправить содержимое текстового поля
+  //window.alert("premuto"); //*****FARE IL CONTROLLO SULL'ID DEL BOTTONE QUA
+  send(drink);
+  window.alert(drink);
+  //send(inputField.value); // Отправить содержимое текстового поля
   inputField.value = '';  // Обнулить текстовое поле
-  inputField.focus();     // Вернуть фокус на текстовое поле
+  //inputField.focus();     // Вернуть фокус на текстовое поле
 });
 
 // Кэш объекта выбранного устройства
@@ -136,8 +140,8 @@ function receive(data) {
 
 // Вывод в терминал
 function log(data, type = '') {
-  terminalContainer.insertAdjacentHTML('beforeend',
-      '<div' + (type ? ' class="' + type + '"' : '') + '>' + data + '</div>');
+  //terminalContainer.insertAdjacentHTML('beforeend',
+      //'<div' + (type ? ' class="' + type + '"' : '') + '>' + data + '</div>');
 }
 
 // Отключиться от подключенного устройства
@@ -168,6 +172,7 @@ function disconnect() {
 
 // Отправить данные подключенному устройству
 function send(data) {
+
   data = String(data);
 
   if (!data || !characteristicCache) {
@@ -175,6 +180,8 @@ function send(data) {
   }
 
   data += '\n';
+  //window.alert(drink);
+  //data = drink + '\n';
 
   if (data.length > 20) {
     let chunks = data.match(/(.|[\r\n]){1,20}/g);
@@ -193,6 +200,13 @@ function send(data) {
 
   log(data, 'out');
 }
+
+function sendMessage(btn_id) {
+  //window.alert(btn_id);
+  drink = btn_id.substring(4, btn_id.length);
+  //window.alert(drink);
+}
+
 
 // Записать значение в характеристику
 function writeToCharacteristic(characteristic, data) {
